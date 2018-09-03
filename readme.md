@@ -15,11 +15,11 @@
 ## 用户模型(schema:inetOrgPerson)
 
 - `username`,即`dn`
-- 'email',即'mail'
-- 'displayName',即`displayName`，会被默认填充为`username`
-- `password`,即'userPassword`
+- `email`,即`mail`
+- `displayName`,即`displayName`，会被默认填充为`username`
+- `password`,即`userPassword`
 
 `sn`会被默认填充为`displayName`,`username`和`email`均唯一。
 
 ## 其他建议
-后续开发中会完成LDAP系统中的`uniqueMember`,'MemberOf`属性与Flask-User中的`Roles`的绑定，建议下设两个`ou`分别为`People`和`Groups`,并将LDAP_BASE_DN设为`ou=People,dn...`
+后续开发中会完成LDAP系统中的`uniqueMember`,`MemberOf`属性与Flask-User中的`Roles`的绑定，建议下设两个`ou`分别为`People`和`Groups`,并将LDAP_BASE_DN设为`ou=People,dn...`
