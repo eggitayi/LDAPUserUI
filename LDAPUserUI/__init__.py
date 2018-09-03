@@ -1,5 +1,9 @@
 import datetime
 from flask import Flask
+import sys,os
+
+sys.path.append(os.path.dirname(__file__))
+
 from config import ConfigClass
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
