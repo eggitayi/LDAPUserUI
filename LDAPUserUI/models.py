@@ -19,7 +19,7 @@ class User(UserMixin):
 
     def __setattr__(self, key, value):
         if key in dir(self):
-            super().__setattr__(key, value)
+            super(User, self).__setattr__(key, value)
             if self.entry and key in ['username', 'password', 'email']:
                 self.convert_to_writable()
                 self.entry[LDAP_ATTR[key]] = value
@@ -33,7 +33,7 @@ class User(UserMixin):
         if entry:
             self.id = entry.entry_dn
             self.username = entry['cn'][0]
-            self.password = str(entry['userPassword'][0], encoding='ascii')
+            self.password = str(entry['userPassword'][0])
             self.email = entry['mail'][0] if len(entry['mail']) > 0 else ""
             self.displayName = entry['displayName'][0] if len(entry['displayName']) > 0 else ""
             self.entry = entry

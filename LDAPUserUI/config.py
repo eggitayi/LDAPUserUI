@@ -28,9 +28,9 @@ class ConfigClass(object):
     # LDAP settings
     LDAP_SERVER = "localhost"
 
-    LDAP_ADMIN_DN = "cn=admin,dc=byrio,dc=org"
-    LDAP_ADMIN_PASSWORD = "admin"
+    LDAP_ADMIN_DN = "cn=Manager,dc=mypass,dc=com"
+    LDAP_ADMIN_PASSWORD = "fhrootroot"
 
-    LDAP_BASE_DN = "ou=People,dc=byrio,dc=org"
+    LDAP_BASE_DN = "ou=xian,dc=mypass,dc=com"
 
     LDAP_PREFERRED_HASH_METHOD = "md5" # md5,sha,sha256,sha384,sha512
