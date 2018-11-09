@@ -6,4 +6,4 @@ ldap_conn = Connection(app.config['LDAP_SERVER'],
                        password=app.config['LDAP_ADMIN_PASSWORD'],
                        auto_bind=True
                        )
-obj_inetorgperson = ObjectDef("inetOrgPerson", ldap_conn)
+obj_inetorgperson = ObjectDef(["inetOrgPerson", "shadowAccount"], ldap_conn)

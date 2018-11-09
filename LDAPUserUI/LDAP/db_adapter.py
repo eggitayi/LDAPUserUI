@@ -67,6 +67,7 @@ class LDAPDBAdapter(DbAdapterInterface):
         object.entry.mail = object.email or ""
         object.entry.displayName = object.displayName or object.username
         object.entry.sn = object.displayName or object.username
+        object.entry.uid = object.displayName or object.username
         assert object.entry.entry_commit_changes()
 
     def add_object(self, object):
